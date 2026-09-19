@@ -3,12 +3,12 @@
 import Image from "next/image";
 import ProductCard from "@/components/ui/ProductCard";
 import Categories from "@/components/sections/Categories";
-import { products } from "@/components/data/products-backup";
+import { products } from "@/components/data/products";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useLanguage } from "@/lib/language";
 
-export default function Products() {
+function ProductsContent() {
   const { t } = useLanguage();
 
   // =====================================================
@@ -53,7 +53,6 @@ export default function Products() {
         bg-fixed
       "
     >
-
       {/* =====================================================
           PRODUCTS HERO
       ===================================================== */}
@@ -67,7 +66,6 @@ export default function Products() {
           pb-14
         "
       >
-
         <div
           className="
             relative
@@ -78,9 +76,6 @@ export default function Products() {
             rounded-xl
           "
         >
-
-          {/* Background Image */}
-
           <Image
             src="/images/banner/products-banner.jpg"
             alt="Products Beef Centric"
@@ -89,9 +84,6 @@ export default function Products() {
             className="object-cover"
           />
 
-
-          {/* Dark Overlay */}
-
           <div
             className="
               absolute
@@ -99,9 +91,6 @@ export default function Products() {
               bg-[#000000]/65
             "
           />
-
-
-          {/* Products Title */}
 
           <div
             className="
@@ -114,7 +103,6 @@ export default function Products() {
               px-8
             "
           >
-
             <h1
               className="
                 font-[family-name:var(--font-cinzel)]
@@ -128,13 +116,9 @@ export default function Products() {
             >
               {t.products.title}
             </h1>
-
           </div>
-
         </div>
-
       </section>
-
 
       {/* =====================================================
           PRODUCT SECTION
@@ -148,9 +132,7 @@ export default function Products() {
           pb-24
         "
       >
-
         <div className="max-w-7xl mx-auto">
-
 
           {/* =================================================
               SEARCH RESULT
@@ -165,30 +147,24 @@ export default function Products() {
                 text-[#1D1D1D]
               "
             >
-
               {t.products.showingResultsFor}{" "}
 
               <span className="font-bold text-[#A31E21]">
                 "{searchQuery}"
               </span>
-
             </p>
           )}
-
 
           {/* =================================================
               CATEGORY FILTER
           ================================================= */}
 
           <div className="mb-12">
-
             <Categories
               selectedCategory={selectedCategory}
               onCategoryChange={setSelectedCategory}
             />
-
           </div>
-
 
           {/* =================================================
               PRODUCT GRID
@@ -205,7 +181,6 @@ export default function Products() {
                 gap-8
               "
             >
-
               {filteredProducts.map((product) => (
 
                 <ProductCard
@@ -217,7 +192,6 @@ export default function Products() {
                 />
 
               ))}
-
             </div>
 
           ) : (
@@ -234,7 +208,6 @@ export default function Products() {
                 text-[#1D1D1D]
               "
             >
-
               <h2
                 className="
                   font-[family-name:var(--font-cinzel)]
@@ -248,23 +221,31 @@ export default function Products() {
               </h2>
 
               <p className="mt-3">
-
                 {t.products.noProductMatch}{" "}
 
                 {searchQuery
                   ? `"${searchQuery}"`
                   : "this category"}.
-
               </p>
-
             </div>
 
           )}
 
         </div>
-
       </section>
-
     </main>
+  );
+}
+
+
+// =====================================================
+// PRODUCTS
+// =====================================================
+
+export default function Products() {
+  return (
+    <Suspense fallback={null}>
+      <ProductsContent />
+    </Suspense>
   );
 }
