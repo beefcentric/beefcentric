@@ -106,9 +106,9 @@ export const products: Product[] = [
   {
     slug: "op-rib-black-angus",
     name: "OP Rib Black Angus",
-    image: "/images/products/op-rib-black-angus.png",
+    image: "/images/products/op-rib.png",
     images: [
-      "/images/products/op-rib-black-angus.png",
+      "/images/products/op-rib.png",
     ],
     price: "Rp 525.000 / kg",
     category: "Premium Beef",
@@ -213,9 +213,8 @@ export const products: Product[] = [
   {
     slug: "striploin-pr",
     name: "Striploin PR",
-    image: "/images/products/striploin-pr-1.png",
+    image: "/images/products/striploin-pr-2.png",
     images: [
-      "/images/products/striploin-pr-1.png",
       "/images/products/striploin-pr-2.png",
     ],
     price: "Rp 330.000 / kg",
@@ -433,9 +432,9 @@ export const products: Product[] = [
   {
     slug: "shank",
     name: "Shank",
-    image: "/images/products/shank.png",
+    image: PLACEHOLDER,
     images: [
-      "/images/products/shank.png",
+      PLACEHOLDER,
     ],
     price: "Rp 140.000 / kg",
     category: "Beef Cuts",
@@ -542,11 +541,11 @@ export const products: Product[] = [
   {
     slug: "shortrib",
     name: "Shortrib",
-    image: "/images/products/shortrib-1.png",
+    image: "/images/products/shortrib-3.png",
     images: [
-      "/images/products/shortrib-1.png",
-      "/images/products/shortrib-2.png",
       "/images/products/shortrib-3.png",
+      "/images/products/shortrib-2.png",
+      "/images/products/shortrib-1.png",
     ],
     price: "Rp 135.000 / kg",
     category: "Beef Cuts",
@@ -610,24 +609,6 @@ export const products: Product[] = [
   },
 
   {
-    slug: "beef-cubes",
-    name: "Beef Cubes",
-    image: "/images/products/daging-rendang-1.png",
-    images: [
-      "/images/products/daging-rendang-1.png",
-      "/images/products/daging-rendang-2.png",
-      "/images/products/daging-rendang-3.png",
-      "/images/products/daging-semur.png",
-    ],
-    price: "Price not available",
-    category: "Beef Cuts",
-    description: {
-      en: "Conveniently cut beef cubes with a satisfying texture and rich beef flavor. Perfect for stews, soups, stir-fries, skewers, and other hearty dishes.",
-      id: "Potongan daging sapi berbentuk cube yang praktis dengan tekstur memuaskan dan cita rasa daging sapi yang kaya. Cocok untuk stew, sup, tumisan, sate, dan berbagai hidangan yang kaya rasa.",
-    },
-  },
-
-  {
     slug: "lung",
     name: "Lung",
     image: PLACEHOLDER,
@@ -643,8 +624,8 @@ export const products: Product[] = [
   },
 
   {
-    slug: "daging-rendang",
-    name: "Daging Rendang",
+    slug: "beef-cubes",
+    name: "Beef Cubes",
     image: "/images/products/daging-rendang-1.png",
     images: [
       "/images/products/daging-rendang-1.png",
@@ -654,8 +635,8 @@ export const products: Product[] = [
     price: "Rp 190.000 / kg",
     category: "Beef Cuts",
     description: {
-      en: "Beef prepared in a practical cut suitable for rendang and other slow-cooked dishes.",
-      id: "Daging sapi yang dipotong praktis dan cocok untuk rendang serta berbagai hidangan yang dimasak perlahan.",
+      en: "Conveniently cut beef cubes with a satisfying texture and rich beef flavor. Perfect for stews, soups, stir-fries, skewers, and other hearty dishes.",
+      id: "Potongan daging sapi berbentuk cube yang praktis dengan tekstur memuaskan dan cita rasa daging sapi yang kaya. Cocok untuk stew, sup, tumisan, sate, dan berbagai hidangan yang kaya rasa.",
     },
   },
 

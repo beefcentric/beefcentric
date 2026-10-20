@@ -432,10 +432,9 @@ export const products: Product[] = [
   {
     slug: "oxtail-center-cut",
     name: "Oxtail Center Cut",
-    image: "/images/products/oxtail-center-cut-1.png",
+    image: "/images/products/oxtail-center-cut.png",
     images: [
-      "/images/products/oxtail-center-cut-1.png",
-      "/images/products/oxtail-center-cut-2.png",
+      "/images/products/oxtail-center-cut.png",
     ],
     price: "Rp 220.000 / kg",
     category: "Beef Cuts",
@@ -473,7 +472,7 @@ export const products: Product[] = [
   {
     slug: "shortrib",
     name: "Shortrib",
-    image: "/images/products/shortrib-1.png",
+    image: "/images/products/shortrib-3.png",
     images: [
       "/images/products/shortrib-1.png",
       "/images/products/shortrib-2.png",
